@@ -32,7 +32,9 @@ if (isset($_POST['login'])) {
                     $error['login'] = "Try again Later";
                 } else {
                     $_SESSION['doctor'] = $uname;
-                    echo "<script>alert('Login Successful'); window.location='doctor/index.php';</script>";
+
+                    header("Location:/doctor/index.php");
+
                     exit();
                 }
             } else {

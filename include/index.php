@@ -19,7 +19,7 @@
             <div class="col-md-3">
                 <img src="info.avif" class="img-fluid shadow" alt="Info">
                 <h5 class="text-center">More info about us</h5>
-                <a href="#">
+                <a href="info.php">
                     <button class="btn btn-success my-3" style="margin-left:30%;">Information</button>
                 </a>
 
@@ -28,7 +28,7 @@
             <div class="col-md-3">
                 <img src="doctor.webp" class="img-fluid shadow" alt="Doctor">
                 <h5 class="text-center">Hello Doctor! Work with uss</h5>
-                <a href="#">
+                <a href="job_doc.php">
                     <button class="btn btn-success my-3" style="margin-left:30%;">Apply Here</button>
                 </a>
             </div>
