@@ -41,6 +41,23 @@
             </div>
 
         </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 p-4 shadow rounded" style="background-color: white; color: black; margin-left: 0;">
+                    <h4 class="text-center">Welcome In Hospital_WEB</h4>
+                    <p style="text-align: center;">
+                        Author--Afsin Sultana , Nafisa Saiyara Aranti
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     </div>
 
 
