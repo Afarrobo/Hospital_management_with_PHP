@@ -32,6 +32,20 @@ session_start();
     // ✅ Count admins
     $adminResult = mysqli_query($connect, "SELECT * FROM admin");
     $adminCount = mysqli_num_rows($adminResult);
+
+    // Doctor count
+    $doctorResult = mysqli_query($connect, "SELECT * FROM doctors");
+    if (!$doctorResult) {
+        die("Doctor query failed: " . mysqli_error($connect)); // Shows actual error
+    }
+    $doctorCount = mysqli_num_rows($doctorResult);
+    // ✅ Count patients
+    $p = mysqli_query($connect, "SELECT * FROM patient");
+    $pp = mysqli_num_rows($p);
+
+    // ✅ Count reports
+    $re = mysqli_query($connect, "SELECT * FROM report");
+    $rep = mysqli_num_rows($re);
     ?>
 
     <div class="container-fluid">
@@ -45,7 +59,7 @@ session_start();
             <div class="col-md-10">
                 <h4 class="my-2">Admin Dashboard</h4>
 
-                <!-- Dashboard Cards in a Row -->
+                <!-- Dashboard Cards -->
                 <div class="row">
 
                     <!-- Admin Card -->
@@ -69,12 +83,12 @@ session_start();
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <h5 class="my-2 text-white" style="font-size: 30px;">0</h5>
+                                    <h5 class="my-2 text-white" style="font-size: 30px;"><?php echo $doctorCount; ?></h5>
                                     <h5 class="text-white">Total</h5>
                                     <h5 class="text-white">Doctor</h5>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="#"><i class="fas fa-user-md fa-3x my-4" style="color: white;"></i></a>
+                                    <a href="doc_list.php"><i class="fas fa-user-md fa-3x my-4" style="color: white;"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -85,12 +99,12 @@ session_start();
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <h5 class="my-2 text-white" style="font-size: 30px;">0</h5>
+                                    <h5 class="my-2 text-white" style="font-size: 30px;"><?php echo $pp; ?> </h5>
                                     <h5 class="text-white">Total</h5>
                                     <h5 class="text-white">Patient</h5>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="#"><i class="fa fa-procedures fa-3x my-4" style="color: white;"></i></a>
+                                    <a href="patient.php"><i class="fa fa-procedures fa-3x my-4" style="color: white;"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -101,12 +115,12 @@ session_start();
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <h5 class="my-2 text-white" style="font-size: 30px;">0</h5>
+                                    <h5 class="my-2 text-white" style="font-size: 30px;"><?php echo $rep; ?></h5>
                                     <h5 class="text-white">Total</h5>
                                     <h5 class="text-white">Report</h5>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="#"><i class="fa fa-flag fa-3x my-4" style="color: white;"></i></a>
+                                    <a href="report.php"><i class="fa fa-flag fa-3x my-4" style="color: white;"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +136,7 @@ session_start();
                                     <h5 class="text-white">Job Request</h5>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="#"><i class="fa fa-book-open fa-3x my-4" style="color: white;"></i></a>
+                                    <a href="doc_job_list.php"><i class="fa fa-book-open fa-3x my-4" style="color: white;"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -133,23 +147,34 @@ session_start();
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <h5 class="my-2 text-white" style="font-size: 30px;">0</h5>
+
+                                    <?php
+
+                                    $in = mysqli_query($connect, "SELECT sum(amount_paid) as profit FROM income");
+
+                                    $row = mysqli_fetch_array($in);
+
+                                    $inc = $row['profit'];
+
+                                    ?>
+
+                                    <h5 class="my-2 text-white" style="font-size: 30px;"><?php echo "$$inc"; ?></h5>
                                     <h5 class="text-white">Total</h5>
                                     <h5 class="text-white">Money</h5>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="#"><i class="fa fa-money-check-alt fa-3x my-4" style="color: white;"></i></a>
+                                    <a href="income.php"><i class="fa fa-money-check-alt fa-3x my-4" style="color: white;"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                </div> <!-- end row -->
-            </div> <!-- end col-md-10 -->
-        </div> <!-- end row -->
-    </div> <!-- end container-fluid -->
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

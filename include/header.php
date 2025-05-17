@@ -60,6 +60,11 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], "admin") !== false) {
                          <li class="nav-item"><a href=" /Hospital/doctor/index.php" class="nav-link text-white">' . $user . '</a></li>
                         <li class="nav-item"><a href="../admin/logout.php" class="nav-link text-white">logout</a></li>
                               ';
+                } else if (isset($_SESSION['patient'])) {
+                    $user = $_SESSION['patient'];
+                    echo '
+                        <li class="nav-item"><a href="#" class="nav-link text-white">' . $user . '</a></li>
+                        <li class="nav-item"><a href="logout.php" class="nav-link text-white">logout</a></li>';
                 } else {
                     echo '
 
@@ -74,7 +79,7 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], "admin") !== false) {
                             <a class="nav-link text-white" href="doctorlogin.php">Doctor</a>
                         </li>
                         <li class="nav-item px-2">
-                            <a class="nav-link text-white" href="#">Patient</a>
+                            <a class="nav-link text-white" href="patient_log.php">Patient</a>
                         </li>
                 
                             

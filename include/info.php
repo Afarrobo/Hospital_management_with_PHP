@@ -10,7 +10,6 @@
         body {
             min-height: 100vh;
             background-color: rgb(194, 107, 123);
-            /* bright pink/red color */
             color: black;
         }
 
@@ -20,7 +19,6 @@
 
         .card {
             background-color: rgba(156, 16, 37, 0.02);
-            /* slightly transparent white */
             border-radius: 10px;
             padding: 20px;
             color: black;
@@ -76,6 +74,27 @@
                 </p>
             </div>
         </div>
+
+        <!-- New Billing Info Block -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">** Our Billing Information ** (৳)</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Doctor Consultation – ৳500</li>
+                    <li class="list-group-item">Blood Test – ৳250</li>
+                    <li class="list-group-item">X-ray – ৳800</li>
+                    <li class="list-group-item">MRI Scan – ৳5000</li>
+                    <li class="list-group-item">ECG – ৳400</li>
+                    <li class="list-group-item">Hospital Bed Charge (Per Day) – ৳1500</li>
+                    <li class="list-group-item">Operation Theater Fee – ৳10000</li>
+                    <li class="list-group-item">Nursing Service – ৳700</li>
+                    <li class="list-group-item">Medicine (General) – ৳1200</li>
+                    <li class="list-group-item">Ambulance Service – ৳1500</li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Billing Info Block -->
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

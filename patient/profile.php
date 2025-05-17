@@ -8,7 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doctor Profile Page</title>
+    <title>Patient Profile Page</title>
 </head>
 
 <body>
@@ -32,9 +32,9 @@ session_start();
                                 <div class="col-md-6">
 
                                     <?php
-                                    if (isset($_SESSION['doctor'])) {
-                                        $doc = $_SESSION['doctor'];
-                                        $query = "SELECT * FROM doctors WHERE username='$doc'";
+                                    if (isset($_SESSION['patient'])) {
+                                        $pat = $_SESSION['patient'];
+                                        $query = "SELECT * FROM patient WHERE username='$pat'";
                                         $res = mysqli_query($connect, $query);
                                         $row = mysqli_fetch_array($res);
                                     } else {
@@ -43,7 +43,7 @@ session_start();
                                     }
                                     ?>
 
-
+                                    <!-- Optionally, display patient info here -->
 
                                 </div>
                             </div>
@@ -52,7 +52,7 @@ session_start();
                                 <h5 class="text-center my-2">Change Username</h5>
                                 <form method="post">
                                     <label>Change Username</label>
-                                    <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter Username" required>
+                                    <input type="text" name="uname" class="form-control" autocomplete="off" placeholder="Enter New Username" required>
                                     <br />
                                     <input type="submit" name="change_uname" class="btn btn-success" value="Change Username">
                                 </form>

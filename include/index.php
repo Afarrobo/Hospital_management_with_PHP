@@ -35,7 +35,7 @@
             <div class="col-md-3">
                 <img src="patient.avif" class="img-fluid shadow" alt="Patient">
                 <h5 class="text-center"> Patient ???</h5>
-                <a href="#">
+                <a href="acc_01.php">
                     <button class="btn btn-success my-3" style="margin-left:30%;">Create Account</button>
                 </a>
             </div>

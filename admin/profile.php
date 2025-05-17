@@ -129,7 +129,7 @@ session_start();
                                     }
                                 }
 
-                                // Display error
+
                                 if (isset($error['p'])) {
                                     $e = $error['p'];
                                     $show = "<h5 class='text-center alert alert-danger'>$e</h5>";
