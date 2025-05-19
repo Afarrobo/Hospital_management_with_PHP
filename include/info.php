@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <!-- New Billing Info Block -->
+
         <div class="card mb-4">
             <div class="card-body">
                 <h2 class="card-title">** Our Billing Information ** (৳)</h2>
@@ -93,7 +93,7 @@
                 </ul>
             </div>
         </div>
-        <!-- End Billing Info Block -->
+
 
     </div>
 

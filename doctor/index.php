@@ -63,11 +63,21 @@ include("../include/connection.php");
 
 
                     <div class="col-md-4 mb-3">
+
                         <div class="dashboard-box bg-success d-flex justify-content-between align-items-center">
                             <h5>Appointments</h5>
-                            <h5 class="text-black my-2" style="font-size:40px;">0</h5>
+
+                            <?php
+                            $app = mysqli_query($connect, "SELECT * FROM appointment
+                            WHERE status ='Pendding' ");
+                            $appoint = mysqli_num_rows($app);
+
+
+                            ?>
+
+                            <h5 class="text-black my-2" style="font-size:40px;"><?php echo $appoint; ?></h5>
                             <h5 class="text-black ">Total</h5>
-                            <i class="fas fa-calendar-check dashboard-icon"></i>
+                            <a href="appointment.php"><i class="fas fa-calendar-check dashboard-icon"></i></a>
                         </div>
                     </div>
 

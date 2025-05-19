@@ -10,7 +10,7 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color:rgb(219, 159, 68);">
     <?php
     include("../include/header.php");
     include("../include/connection.php");

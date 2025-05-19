@@ -11,7 +11,7 @@ session_start();
     <title>Patient Profile Page</title>
 </head>
 
-<body>
+<body style="background-color:rgb(113, 155, 186);">
 
     <?php include("../include/header.php"); ?>
 

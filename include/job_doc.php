@@ -1,21 +1,20 @@
 <?php
 session_start();
-include("connection.php");  // ✅ your DB connection
+include("connection.php");
 
-$message = ""; // message after submission
+$message = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Escape values
+
     $name = mysqli_real_escape_string($connect, $_POST['name']);
     $current_status = mysqli_real_escape_string($connect, $_POST['current_status']);
     $academic_info = mysqli_real_escape_string($connect, $_POST['academic_info']);
 
-    // Insert into your actual table
     $query = "INSERT INTO doc_job (name, current_status, Academic_info) 
               VALUES ('$name', '$current_status', '$academic_info')";
 
     if (mysqli_query($connect, $query)) {
-        $message = "✅ Job application submitted successfully! wait for our reply. Thank You .";
+        $message = "Job application submitted successfully! wait for our reply. Thank You .";
     } else {
         $message = "❌ Error: " . mysqli_error($connect);
     }

@@ -52,7 +52,7 @@ session_start();
     </style>
 </head>
 
-<body>
+<body style="background-color:rgb(155, 115, 188);">
 
     <?php
     include("../include/header.php");

@@ -15,7 +15,7 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
-<body>
+<body style="background-color:rgb(138, 188, 115);">
 
     <?php include("../include/header.php");
     include("../include/connection.php");
@@ -46,13 +46,13 @@ session_start();
                     </div>
 
                     <!-- Book Appointment -->
-                    <div class="col-md-3 bg-warning mx-2 text-white" style="height: 150px;">
+                    <div class="col-md-3 bg-secondary mx-2 text-white" style="height: 150px;">
                         <div class="row">
                             <div class="col-md-8">
                                 <h5 class="my-4">Book Appointment</h5>
                             </div>
                             <div class="col-md-4">
-                                <a href="#"><i class="fa fa-calendar fa-3x my-4" style="color: white;"></i></a>
+                                <a href="appintment.php"><i class="fa fa-calendar fa-3x my-4" style="color: white;"></i></a>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ session_start();
                                 <h5 class="my-4">My Invoice</h5>
                             </div>
                             <div class="col-md-4">
-                                <a href="#"><i class="fas fa-file-invoice-dollar fa-3x my-4" style="color: white;"></i></a>
+                                <a href="invoice.php"><i class="fas fa-file-invoice-dollar fa-3x my-4" style="color: white;"></i></a>
                             </div>
                         </div>
                     </div>

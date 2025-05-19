@@ -11,7 +11,7 @@ session_start();
     <title>Admin Profile</title>
 </head>
 
-<body>
+<body style="background-color:rgb(115, 130, 188);">
 
     <?php
 

@@ -62,7 +62,7 @@ if (isset($_POST['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctors Login</title>
 
-    <!-- Bootstrap CSS (Include this if not already added in header.php) -->
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -116,7 +116,7 @@ if (isset($_POST['login'])) {
                             <label>Password</label>
                             <input type="password" name="pass" class="form-control" autocomplete="off" placeholder="Enter Password">
                         </div>
-                        <input type="submit" name="login" class="btn btn-success btn-block" value="Login">
+                        <a href="/Hospital/doctor/index.php"> <input type="submit" name="login" class="btn btn-success btn-block" value="Login"></a>
                         <p class="mt-3 text-center">Don't have an account? <a href="apply.php">Apply Here</a></p>
                     </form>
                 </div>

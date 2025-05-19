@@ -64,7 +64,7 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], "admin") !== false) {
                     $user = $_SESSION['patient'];
                     echo '
                         <li class="nav-item"><a href="#" class="nav-link text-white">' . $user . '</a></li>
-                        <li class="nav-item"><a href="logout.php" class="nav-link text-white">logout</a></li>';
+                        <li class="nav-item"><a href="../patient/logout.php" class="nav-link text-white">logout</a></li>';
                 } else {
                     echo '
 
