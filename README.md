@@ -1,10 +1,10 @@
 <h1>Hospital management Project(CSE479)</h1>
 
 <p style="font-size : 40px ;">
-
+<br>
 Submitted To-
-Arman Hossain
-Lecturer
+Arman Hossain <br>
+Lecturer <br>
 East West University
 
 </p>
