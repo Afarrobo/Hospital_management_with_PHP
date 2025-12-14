@@ -48,7 +48,7 @@
                 <div class="col-md-6 p-4 shadow rounded" style="background-color: white; color: black; margin-left: 0;">
                     <h4 class="text-center">Welcome In Hospital_WEB</h4>
                     <p style="text-align: center;">
-                        Author--Afsin Sultana , Nafisa Saiyara Aranti
+                        Author-- Hafsha Salauddin , Tasniya Aziza Tufa, Salma jahan
                     </p>
                 </div>
             </div>
